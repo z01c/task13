@@ -5,6 +5,6 @@ import java.util.List;
 public class Bus {
     int busId;
     String route;
-    List<BusStop> stops;
+    List<BusStop> stops; // testing...
 
 }
