@@ -1,0 +1,2 @@
+serviceClass: ebiz.task13.team8.client.GreetingService
+path: 93758655344C97681758EFA4BBAB9CE8.gwt.rpc
