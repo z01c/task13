@@ -2,20 +2,20 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>ebiz.task13.team8.server.GreetingServiceImpl</servlet-class>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>ebiz.task13.controller.Controller</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/task13/greet</url-pattern>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>Task13.html</welcome-file>
   </welcome-file-list>
-
+  
   <servlet>
     <servlet-name>SystemServiceServlet</servlet-name>
     <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
