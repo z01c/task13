@@ -13,7 +13,7 @@
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>Task13.html</welcome-file>
+    <welcome-file>task13.html</welcome-file>
   </welcome-file-list>
   
   <servlet>
