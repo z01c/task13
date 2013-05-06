@@ -1,0 +1,75 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header">
+        <h3>
+            Trip Planner
+        </h3>
+    </div>
+    <div data-role="content">
+      <form action="">
+        <div data-role="fieldcontain">
+            <label for="searchinput1">
+                From:
+            </label>
+            <input name="from" id="searchinput1" placeholder="" value="" type="search">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="searchinput2">
+                To:
+            </label>
+            <input name="to" id="searchinput2" placeholder="" value="" type="search">
+        </div>
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <input id="radio1" name="choose" value="radio1" type="radio">
+                <label for="radio1">
+                    Now
+                </label>
+                <input id="radio2" name="choose" value="radio2" type="radio">
+                <label for="radio2">
+                    Departure
+                </label>
+                <input id="radio3" name="choose" value="radio3" type="radio">
+                <label for="radio3">
+                    Arrival
+                </label>
+            </fieldset>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="textinput1">
+                Date
+            </label>
+            <input name="date" id="textinput1" placeholder="" value="" type="date"
+            data-mini="true">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="textinput2">
+                Time
+            </label>
+            <input name="time" id="textinput2" placeholder="" value="" type="time"
+            data-mini="true">
+        </div>
+        <a data-role="button" data-inline="true" href="direction.html">
+            Search
+        </a>
+      </form>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">		
+	  <div data-role="navbar">
+		<ul>
+			<li><a href="Task13.html" data-icon="home">Home</a></li>
+			<li><a href="search.html" data-icon="forward">Direction</a></li>
+			<li><a href="twitter.html" data-icon="twitter">Twitter</a></li>
+			<li><a href="coupon.html" data-icon="star">Ad</a></li>
+		</ul>
+	  </div>	
+    </div>    
+</div>
+</body>
+</html>
