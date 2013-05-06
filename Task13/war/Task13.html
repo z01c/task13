@@ -1,39 +1,29 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>My Page</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
-</head> 
-<body> 
-
-<div data-role="page">
-
-	<div data-role="header">
-		<h1>My Title</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-		<p>Hello Team V</p>	
-<ul data-role="listview" data-inset="true" data-filter="true">
-	<li><a href="#">Acura</a></li>
-	<li><a href="#">Audi</a></li>
-	<li><a href="#">BMW</a></li>
-	<li><a href="#">Cadillac</a></li>
-	<li><a href="#">Ferrari</a></li>
-</ul>
-
-<form>
-   <label for="slider-0">Input slider:</label>
-   <input type="range" name="slider" id="slider-0" value="25" min="0" max="100"  />
-</form>
-<a href="#" data-role="button" data-icon="star">Star button</a>		
-	</div><!-- /content -->
-
-
-</div><!-- /page -->
-
-</body>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header">
+        <h3>
+            Trip Planner
+        </h3>
+    </div>
+    <div data-role="content">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Pittsburgh, PA&amp;zoom=10&amp;size=288x200&amp;markers=Pittsburgh&amp;sensor=false"
+        width="380" height="300">
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="index.html" data-icon="home">Home</a></li>
+			<li><a href="search.html" data-icon="forward">Direction</a></li>
+			<li><a href="twitter.html" data-icon="twitter">Twitter</a></li>
+			<li><a href="coupon.html" data-icon="star">Ad</a></li>
+		</ul>
+	</div>
+   </div>
+    </div>
 </html>
