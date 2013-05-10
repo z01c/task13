@@ -1,7 +1,45 @@
 .jtwt { list-style: none; }
-.jtwt li { margin-bottom: 10px; }
+
 .jtwt li:last-child { margin-bottom: 0px; }
 .jtwt_loader { font-weight: bold; }
-.jtwt_picture { float: left; margin-right: 10px; }
-p.jtwt_tweet_text { text-align: justify; }
-a.jtwt_date { font-size: 12px; }
+
+
+
+
+.jtwt li {
+
+color:#444;
+font-size:12px;
+width:600px;
+margin: 0 auto;
+
+}
+.twitter_container a{
+
+color:#0066CC;
+font-weight:bold;
+
+}
+p.jtwt_tweet_text{
+
+height:60px;
+padding:6px; 
+border-bottom:solid 1px #DEDEDE;
+
+}
+.jtwt_picture {
+
+float:left;
+margin-right:14px;
+border:solid 2px #DEDEDE;
+width:50px;
+height:50px;
+
+}
+a.jtwt_date {
+
+font-size:11px;
+padding-top:4px;
+color:#999;
+
+}
