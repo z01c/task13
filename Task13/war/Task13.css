@@ -32,3 +32,9 @@ h1 {
 #closeButton {
   margin: 15px 6px 6px;
 }
+.ui-content{
+	padding-top:0px;
+}
+#nearby{
+	padding:.2em 15px;
+}
