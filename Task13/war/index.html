@@ -1,11 +1,40 @@
 <!doctype html> 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
     <script type="text/javascript" src="js/modernizr-2.0.6/modernizr.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
+        function initialize() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    //console.log(position.coords);
+                    getReverseGeocodingData(position.coords.latitude, position.coords.longitude);
+                });
+            } else {
+                getReverseGeocodingData(40.4406, -79.9961);
+            }
+        }
+
+        function getReverseGeocodingData(lat, lng) {
+            var latlng = new google.maps.LatLng(lat, lng);
+            // This is making the Geocode request
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({'latLng': latlng}, function(results, status) {
+                if (status !== google.maps.GeocoderStatus.OK) {
+                    alert(status);
+                }
+                // This is checking to see if the Geoeode Status is OK before proceeding
+                if (status == google.maps.GeocoderStatus.OK) {
+                    //console.log(results[0].formatted_address);
+                    var address = (results[0].formatted_address);
+                    $('#searchinput1').val(address);
+                    //  document.getElementById('searchinput1').val = address;
+                }
+            });
+        }
         function redirect(){
             var val1 = document.getElementById('searchinput1').value;
             var val2 = document.getElementById('searchinput2').value;
@@ -14,50 +43,60 @@
         }
     </script>
 </head>
-<body>
+<body onload="initialize();">
     <div data-role="page" id="page1">
         <div data-theme="a" data-role="header">
             <h3>
-                Trip Planner
+                BUS TRACKER
             </h3>
         </div>
         <div data-role="content">
             <form action="">
                 <div data-role="fieldcontain">
-                    <input name="searchinput1" id="searchinput1" placeholder="" value="From" type="search" data-mini="true">
+                    <input type="text" name="searchinput1" id="searchinput1" placeholder="" value="My Location" type="search" data-mini="true" onfocus="this.value==this.defaultValue?this.value='':null">
                 </div>
                 <div data-role="fieldcontain">
-                    <input name="searchinput2" id="searchinput2" placeholder="" value="To" type="search" data-mini="true">
+                    <input type="text" name="searchinput2" id="searchinput2" placeholder="" value="End point:" type="search" data-mini="true" onfocus="this.value==this.defaultValue?this.value='':null">
                 </div>
-                <input type="submit" name="Search" value="Search" onclick="redirect();return false;"/>
+				<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU"></script>
+        <script>
+            var autocomplete = new google.maps.places.Autocomplete($("#searchinput1")[0], {});
+			var autocomplete = new google.maps.places.Autocomplete($("#searchinput2")[0], {});
+            google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                var place = autocomplete.getPlace();
+                console.log(place.address_components);
+            });
+        </script>
+                <input type="submit" name="Search" value="Search" onclick="redirect();
+            return false;"/>
             </form>
 
-            <ul data-role="listview" data-divider-theme="d" data-inset="true">
+            <ul data-role="listview" data-divider-theme="a" data-inset="true">
                 <li data-role="list-divider" role="heading">
-                    Nearest Buses
+                    Nearby Buses
                 </li>
-                <li data-theme="c" data-mini="true">
-                    61B - in 2 mins
+                <li data-theme="d" data-mini="true">
+                    61B <FONT COLOR="#ff0000">(Outbound)</FONT> - in 2 mins
                 </li>
-                <li data-theme="c" data-mini="true">
-                    71c - in 3 mins
+                <li data-theme="d" data-mini="true">
+                    71C <FONT COLOR="#1100ff">(Inbound)</FONT> - in 3 mins 
                 </li>
-                <li data-theme="c" data-mini="true">
-                    61D - in 5 mins
+                <li data-theme="d" data-mini="true">
+                    61D <FONT COLOR="#ff0000">(Outbound)</FONT> - in 5 mins
                 </li>
                 <li data-theme="c">
-                    <a href="#" data-transition="slide" data-mini="true">
-                        View Map
+                    <a href="#" onclick="window.location = 'geo.html';return false;" data-transition="slide" data-mini="true">
+                        Map View
                     </a>
                 </li>
             </ul>
             <div style="">
-                <img style="width: 340px; height: 48px" src="http://rizergames.com/flyingcats/fcg-banner-320x48.png">
+                <img style="width: 100%; height: 50px" src="images/ads.gif">
             </div>
             <div data-theme="a" data-role="footer" data-position="fixed">
                 <div>
                     <a data-role="button" rel="external" data-inline="true" data-icon="alert" href="twitter.html" data-mini="true">
-                        Alert
+                        Notification
                     </a>
                 </div>
             </div>

@@ -1,5 +1,5 @@
-<html>
-    <head>
+<!doctype html> 
+<head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -64,7 +64,7 @@
                     console.log(getLatLngArray);
                     directionsDisplay = new google.maps.DirectionsRenderer();
                     var mapOptions = {
-                        zoom: 14,
+                        zoom: 15,
                         mapTypeId: google.maps.MapTypeId.ROADMAP,
                         center: getLatLngArray[0]
                     }
@@ -122,43 +122,25 @@
             <div data-theme="a" data-role="header" data-backbtn="true">
                 <a data-role="button" data-transition="fade" data-theme="a" data-rel="back" href="" data-direction="reverse" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" >Back</a> 
                 <h3>
-                    28X
+                    Directions
                 </h3>
             </div>
             <div data-role="content">
 
-                <!--<ul data-role="listview" data-divider-theme="c" data-inset="true">
-                    <li data-role="list-divider" role="heading">
-                        Results
-                    </li>
-                    <li data-theme="c">
-                        <a \>
-                            Head north on Morewood Ave towards Fifth Avenue
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="#page1" data-transition="slide">
-                            Turn left onto Fifth Avenue
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="#page1" data-transition="slide">
-                            Take exit 277 to merge onto US-2 W towards Davenport
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="map.html" data-transition="slide" rel="external">
-                            Turn right onto S Craig Rd
-                            Destination will be on the right
-                        </a>
-                    </li>
-                </ul>-->
                 <div id="map-canvas"></div>
                 <div id="directions-panel"></div>
-                <div onclick="redirect();">View Full map</div>
+				<input type="submit" name="View Map" value="View Map" onclick="redirect(); return false;"/>
+                <!-- <div onclick="redirect();">View Map</div> -->
                 <div style="">
-                    <img style="width: 320px; height: 48px" src="http://rizergames.com/flyingcats/fcg-banner-320x48.png">
-                </div> 
+                <img style="width: 100%; height: 50px" src="images/ads.gif">
+            </div>
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <div>
+                    <a data-role="button" rel="external" data-inline="true" data-icon="home" href="index.html" data-mini="true">
+                        Home
+                    </a>
+                </div>
+            </div>
 
             </div>
 </html>
