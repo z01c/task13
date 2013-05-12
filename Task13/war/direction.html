@@ -115,6 +115,7 @@
 			addSliderAccess: true,
 			sliderAccessArgs: { touchonly: false }
 		});
+				window.onload = setTimeout("initialize()", 1000);
         </script>
 
 
@@ -140,7 +141,7 @@
 }
 </style>
 </head>
-<body onload="initialize()">
+<body>
 	<div data-role="page" id="page1">
 		<div data-theme="a" data-role="header" data-backbtn="true">
 			<a data-role="button" href="#page1" data-icon="gear"
@@ -151,26 +152,20 @@
 			<h3>Route</h3>
 		</div>
 		<div data-role="content">
-			<ul data-role="listview" data-divider-theme="c" data-inset="true"
-				data-mini="true">
-				Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
-				<!--<li data-role="list-divider" role="heading">
- Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê ÊFrom:
- Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê</li>-->
-				Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
-				<li data-theme="d" data-mini="true" id="from1">Ê Ê Ê Ê Ê Ê Ê Ê
-					Ê Ê Ê ÊFrom: <script type="text/javascript">document.write(requestVar['searchinput1'])</script>
-					Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
-				</li> Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
-				<!--<li data-role="list-divider" role="heading" id="to1">
- Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê ÊTo:
- Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê</li>-->
-				Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
-				<li data-theme="d" data-mini="true">Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê ÊTo:
-					<script type="text/javascript">document.write(requestVar['searchinput2'])</script>
-					Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
-				</li> Ê Ê Ê Ê Ê Ê Ê Ê
-			</ul>
+			<ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true">
+                    <!--<li data-role="list-divider" role="heading">
+                        From:
+                    </li>-->
+                    <li data-theme="d" data-mini="true" id="from1">
+                        From: <script type="text/javascript">document.write(requestVar['searchinput1'])</script>            
+                    </li>
+                    <!--<li data-role="list-divider" role="heading" id="to1">
+                        To:
+                    </li>-->
+                    <li data-theme="d" data-mini="true">
+                        To: <script type="text/javascript">document.write(requestVar['searchinput2'])</script>
+                    </li>
+                </ul>
 
 			<div id="map-canvas"></div>
 			<div id="directions-panel" onclick="redirect();"></div>

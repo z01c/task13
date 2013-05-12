@@ -100,7 +100,7 @@
                 var param = encodeURIComponent('searchinput1=' + val1 + '&searchinput2=' + val2);
                 window.location = 'map.html?' + param;
             }
-
+            window.onload = setTimeout("initialize()", 1000);
         </script>
         <style>
             #map-canvas{
@@ -117,7 +117,7 @@
             }
         </style>
     </head>
-    <body onload="initialize()">
+    <body>
         <div data-role="page" id="page1">
             <div data-theme="a" data-role="header" data-backbtn="true">
                 <a data-role="button" data-transition="fade" data-theme="a" data-rel="back" href="" data-direction="reverse" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" >Back</a> 
