@@ -14,13 +14,13 @@ function success(position) {
     return;
   }
   
-  s.innerHTML = "found you!";
+  s.innerHTML = "";
   s.className = 'success';
   
   var mapcanvas = document.createElement('div');
   mapcanvas.id = 'mapcanvas';
   mapcanvas.style.height = '400px';
-  mapcanvas.style.width = '560px';
+  mapcanvas.style.width = '100%';
     
   document.querySelector('article').appendChild(mapcanvas);
   
@@ -67,7 +67,7 @@ if (navigator.geolocation) {
 		<a data-role="button" data-transition="fade" data-theme="a" data-rel="back" href="" data-direction="reverse" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" >Back</a>
     </div>
 	  <article>
-      <p>Finding your location and nearby buses: <span id="status">checking...</span></p>
+      <p>Finding your location and nearby buses: <span id="status"></span></p>
     </article>
  </body>   
 </html>
