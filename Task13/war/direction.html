@@ -1,22 +1,30 @@
-<!doctype html> 
+<!doctype html>
 <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-        <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" /> -->
-        <link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
-        <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
-        <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script> -->
-        <!-- Optional Mousewheel support: http://brandonaaron.net/code/mousewheel/docs -->
-        <script type="text/javascript" src="PATH/TO/YOUR/COPY/OF/jquery.mousewheel.min.js"></script>
-        <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
-        <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
-        <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-		<link type="text/css" rel="stylesheet" href="Task13.css" />
-		<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
-        <script type="text/javascript">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" /> -->
+<link rel="stylesheet" type="text/css"
+	href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script> -->
+<!-- Optional Mousewheel support: http://brandonaaron.net/code/mousewheel/docs -->
+<script type="text/javascript"
+	src="PATH/TO/YOUR/COPY/OF/jquery.mousewheel.min.js"></script>
+<script type="text/javascript"
+	src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+<script type="text/javascript"
+	src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
+<script type="text/javascript"
+	src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<link type="text/css" rel="stylesheet" href="Task13.css" />
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript">
             var directionsDisplay;
             var directionsService = new google.maps.DirectionsService();
             var map;
@@ -108,64 +116,76 @@
 			sliderAccessArgs: { touchonly: false }
 		});
         </script>
-	
-		
-		
-        <style>
-            #map-canvas{
-                height: 400px;
-                width: 520px;
-            }
-            #directions-panel {
-                height: 100%;
-                width: 100%;
-                overflow: auto;
-            }
-            #directions-panel .adp{
-                display: none;
-            }            
-            #map-canvas{
-                display: none;
-            }
-        </style>
-    </head>
-    <body onload="initialize()">
-        <div data-role="page" id="page1">
-            <div data-theme="a" data-role="header" data-backbtn="true">
-                <a data-role="button" href="#page1" data-icon="gear" class="ui-btn-right">
-                    Time
-                </a>
-                <a data-role="button" data-transition="fade" data-theme="a" data-rel="back" href=""  data-icon="arrow-l" data-iconpos="left" class="ui-btn-left" >Back</a>
 
-                <h3>
-                    Route
-                </h3>
-            </div>
-            <div data-role="content">
-                <ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true">
-                    <li data-role="list-divider" role="heading">
-                        From:<small><script type="text/javascript">document.write(requestVar['searchinput1'])</script></small>
-                        <br>
-                        To:
-                         <small><script type="text/javascript">document.write(requestVar['searchinput2'])</script></small>
-                    </li>
-                </ul>
 
-                <div id="map-canvas"></div>
-                <div id="directions-panel" onclick="redirect();"></div>
-				
-				<!--  input name="slider_example_3" id="slider_example_3" value class="hasDatepicker" type="text"-->
-                
-				<div style="">
-                <img style="width: 100%; height: 50px" src="images/ads.gif">
-            </div>
-            <div data-theme="a" data-role="footer" data-position="fixed">
-                <div>
-                    <a data-role="button" rel="external" data-inline="true" data-icon="home" href="index.html" data-mini="true">
-                        Home
-                    </a>
-                </div>
-            </div>
 
-            </div>
-</html>
+<style>
+#map-canvas {
+	height: 400px;
+	width: 520px;
+}
+
+#directions-panel {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+
+#directions-panel .adp {
+	display: none;
+}
+
+#map-canvas {
+	display: none;
+}
+</style>
+</head>
+<body onload="initialize()">
+	<div data-role="page" id="page1">
+		<div data-theme="a" data-role="header" data-backbtn="true">
+			<a data-role="button" href="#page1" data-icon="gear"
+				class="ui-btn-right"> Time </a> <a data-role="button"
+				data-transition="fade" data-theme="a" data-rel="back" href=""
+				data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>
+
+			<h3>Route</h3>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-divider-theme="c" data-inset="true"
+				data-mini="true">
+				Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
+				<!--<li data-role="list-divider" role="heading">
+ Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê ÊFrom:
+ Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê</li>-->
+				Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
+				<li data-theme="d" data-mini="true" id="from1">Ê Ê Ê Ê Ê Ê Ê Ê
+					Ê Ê Ê ÊFrom: <script type="text/javascript">document.write(requestVar['searchinput1'])</script>
+					Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
+				</li> Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
+				<!--<li data-role="list-divider" role="heading" id="to1">
+ Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê ÊTo:
+ Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê</li>-->
+				Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
+				<li data-theme="d" data-mini="true">Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê ÊTo:
+					<script type="text/javascript">document.write(requestVar['searchinput2'])</script>
+					Ê Ê Ê Ê Ê Ê Ê Ê Ê Ê
+				</li> Ê Ê Ê Ê Ê Ê Ê Ê
+			</ul>
+
+			<div id="map-canvas"></div>
+			<div id="directions-panel" onclick="redirect();"></div>
+
+			<!--  input name="slider_example_3" id="slider_example_3" value class="hasDatepicker" type="text"-->
+
+			<div style="">
+				<img style="width: 100%; height: 50px" src="images/ads.gif">
+			</div>
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<div>
+					<a data-role="button" rel="external" data-inline="true"
+						data-icon="home" href="index.html" data-mini="true"> Home </a>
+				</div>
+			</div>
+
+		</div>
+		</html>
