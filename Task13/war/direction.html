@@ -115,7 +115,7 @@
 			addSliderAccess: true,
 			sliderAccessArgs: { touchonly: false }
 		});
-				window.onload = setTimeout("initialize()", 1000);
+				//window.onload = setTimeout("initialize()", 1000);
         </script>
 
 
@@ -141,7 +141,7 @@
 }
 </style>
 </head>
-<body>
+<body onload="initialize()">
 	<div data-role="page" id="page1">
 		<div data-theme="a" data-role="header" data-backbtn="true">
 			<a data-role="button" href="#page1" data-icon="gear"
@@ -153,15 +153,11 @@
 		</div>
 		<div data-role="content">
 			<ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true">
-                    <!--<li data-role="list-divider" role="heading">
-                        From:
-                    </li>-->
+                    
                     <li data-theme="d" data-mini="true" id="from1">
                         From: <script type="text/javascript">document.write(requestVar['searchinput1'])</script>            
                     </li>
-                    <!--<li data-role="list-divider" role="heading" id="to1">
-                        To:
-                    </li>-->
+                    
                     <li data-theme="d" data-mini="true">
                         To: <script type="text/javascript">document.write(requestVar['searchinput2'])</script>
                     </li>
