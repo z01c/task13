@@ -111,11 +111,7 @@
                 window.location = 'detail.html?' + param;
 			
             }
-				$('#slider_example_3').datetimepicker({
-			addSliderAccess: true,
-			sliderAccessArgs: { touchonly: false }
-		});
-				//window.onload = setTimeout("initialize()", 1000);
+			window.onload = setTimeout("initialize()", 1000);
         </script>
 
 
@@ -141,7 +137,7 @@
 }
 </style>
 </head>
-<body onload="initialize()">
+<body>
 	<div data-role="page" id="page1">
 		<div data-theme="a" data-role="header" data-backbtn="true">
 			<a data-role="button" href="#page1" data-icon="gear"
