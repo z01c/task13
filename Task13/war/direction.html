@@ -135,6 +135,9 @@
 #map-canvas {
 	display: none;
 }
+#search {
+	padding: .2em 15px;
+}
 </style>
 </head>
 <body>
@@ -149,11 +152,11 @@
 		<div data-role="content">
 			<ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true">
                     
-                    <li data-theme="d" data-mini="true" id="from1">
+                    <li id='search' data-theme="d" data-mini="true" id="from1">
                         From: <script type="text/javascript">document.write(requestVar['searchinput1'])</script>            
                     </li>
                     
-                    <li data-theme="d" data-mini="true">
+                    <li id='search' data-theme="d" data-mini="true">
                         To: <script type="text/javascript">document.write(requestVar['searchinput2'])</script>
                     </li>
                 </ul>
