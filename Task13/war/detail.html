@@ -129,18 +129,22 @@
 
                 <div id="map-canvas"></div>
                 <div id="directions-panel"></div>
-				<input type="submit" name="View Map" value="View Map" onclick="redirect(); return false;"/>
+				
+				<img style="width: 100%; height:100%" src="images/fake.png">
+				<input type="submit" name="Map View" value="Map View" onclick="redirect(); return false;"/>
                 <!-- <div onclick="redirect();">View Map</div> -->
                 <div style="">
                 <img style="width: 100%; height: 50px" src="images/ads.gif">
             </div>
             <div data-theme="a" data-role="footer" data-position="fixed">
-                <div>
-                    <a data-role="button" rel="external" data-inline="true" data-icon="home" href="index.html" data-mini="true">
-                        Home
-                    </a>
-                </div>
-            </div>
+				<div data-role="controlgroup" data-type="horizontal" >
+					<a data-role="button" rel="external" data-inline="true"
+						data-icon="home" href="index.html" data-mini="true"> Home </a>
+						<a data-role="button" rel="external" data-inline="true"
+					data-icon="alert" href="twitter.html" data-mini="true">
+					Notification </a>
+				</div>
+			</div>
 
             </div>
 </html>
